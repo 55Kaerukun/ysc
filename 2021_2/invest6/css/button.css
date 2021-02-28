@@ -1,0 +1,256 @@
+/* クラスによるCSS修飾指定
+btn-yuya	基本（基本色緑）
+is-red	ボタン赤
+is-blue	ボタン青
+is-black	ボタン黒
+is-reflection	光スラッシュ
+is-trembling	矢印アイコン動かす
+is-bounce	ボタンバウンド
+is-purun	ボタンぽよぽよ
+*/
+
+.btn-yuya {
+  padding: .5em 0;
+  overflow: hidden;
+  position: relative;
+}
+.btn-yuya a {
+  border: solid #fff 3px;
+  border-radius: 12px;
+  box-shadow: 1px 1px 10px 0 #a1a1a1;
+  color: #fff;
+  display: block;
+  font-size: 1.6em;
+  font-weight: bold;
+  line-height: 1.3;
+  margin: 2em auto;
+  padding: 1em 2em .8em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+  vertical-align: middle;
+  width: 59%;
+}
+.btn-yuya.is-fz20 a {
+  font-size: 20px;
+}
+.btn-yuya a img {
+  vertical-align: middle;
+}
+.btn-yuya a:after {
+  content: ' ' !important;
+}
+ 
+/* ボタン内アイコン */
+.btn-yuya a:before {
+  content: "\f138";
+  font-family: "fontawesome";
+  font-weight: normal;
+  font-size: 1.1em;
+  margin-top: -.6em;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+}
+.btn-yuya a:hover {
+  box-shadow: 1px 1px 2px 0 #a1a1a1;
+  filter: alpha(opacity=70);
+  opacity: .7;
+}
+ 
+/* 2つ並べた時の余白 */
+.btn-yuya + .btn-yuya a {
+  margin-top: 0;
+}
+ 
+/* 緑ボタン */
+.btn-yuya a {
+  background: #00a23f;
+  background: -webkit-linear-gradient(#00a23f, #39900a);
+  background: linear-gradient(#00a23f, #39900a);
+  text-shadow: 0 0 10px rgba(255,255,255,.8), 1px 1px 1px rgba(0,0,0,1);
+}
+ 
+/* 赤ボタン */
+.btn-yuya.is-red a {
+  background: #fb4e3e;
+  background: -webkit-linear-gradient(#00a23f, #39900a);
+  background: linear-gradient(#fb4e3e, #d64b26);
+}
+ 
+/* 青ボタン */
+.btn-yuya.is-blue a {
+  background: #09c;
+  background: -webkit-linear-gradient(#09c, #069);
+  background: linear-gradient(#09c, #069);
+}
+ 
+/* 黒ボタン */
+.btn-yuya.is-black a {
+  background: #666;
+  background: -webkit-linear-gradient(#8a8a8a, #666);
+  background: linear-gradient(#8a8a8a, #666);
+}
+ 
+/* 光沢 */
+.is-reflection a {
+  overflow: hidden;
+}
+.is-reflection a:after {
+  -moz-animation: is-reflection 2s ease-in-out infinite;
+  -moz-transform: rotate(45deg);
+  -ms-animation: is-reflection 2s ease-in-out infinite;
+  -ms-transform: rotate(45deg);
+  -o-animation: is-reflection 2s ease-in-out infinite;
+  -o-transform: rotate(45deg);
+  -webkit-animation: is-reflection 2s ease-in-out infinite;
+  -webkit-transform: rotate(45deg);
+  animation: is-reflection 2s ease-in-out infinite;
+  background-color: #fff;
+  content: " ";
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: -180px;
+  transform: rotate(45deg);
+  width: 30px;
+}
+/* アニメーション遅延 */
+.is-reflection + .is-reflection a:after {
+  -webkit-animation-delay: .1s;
+  animation-delay: .1s;
+}
+@keyframes is-reflection {
+  0% { -webkit-transform: scale(0) rotate(45deg); transform: scale(0) rotate(45deg); opacity: 0; }
+  80% { -webkit-transform: scale(0) rotate(45deg); transform: scale(0) rotate(45deg); opacity: 0.5; }
+  81% { -webkit-transform: scale(4) rotate(45deg); transform: scale(4) rotate(45deg); opacity: 1; }
+  100% { -webkit-transform: scale(50) rotate(45deg); transform: scale(50) rotate(45deg); opacity: 0; }
+}
+@-webkit-keyframes is-reflection {
+  0% { -webkit-transform: scale(0) rotate(45deg); opacity: 0; }
+  80% { -webkit-transform: scale(0) rotate(45deg); opacity: 0.5; }
+  81% { -webkit-transform: scale(4) rotate(45deg); opacity: 1; }
+  100% { -webkit-transform: scale(50) rotate(45deg); opacity: 0; }
+}
+ 
+/* 光沢 */
+.is-reflection2 a {
+  overflow: hidden;
+}
+.is-reflection2 a:after {
+  -moz-animation: is-reflection 3s ease-in-out infinite;
+  -moz-transform: rotate(45deg);
+  -ms-animation: is-reflection 3s ease-in-out infinite;
+  -ms-transform: rotate(45deg);
+  -o-animation: is-reflection 3s ease-in-out infinite;
+  -o-transform: rotate(45deg);
+  -webkit-animation: is-reflection 3s ease-in-out infinite;
+  -webkit-transform: rotate(45deg);
+  animation: is-reflection 3s ease-in-out infinite;
+  background-color: #fff;
+  content: " ";
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: -180px;
+  transform: rotate(45deg);
+  width: 30px;
+}
+/* アニメーション遅延 */
+.is-reflection2 + .is-reflection2 a:after {
+  -webkit-animation-delay: .1s;
+  animation-delay: .1s;
+}
+@keyframes is-reflection2 {
+  0% { -webkit-transform: scale(0) rotate(45deg); transform: scale(0) rotate(45deg); opacity: 0; }
+  80% { -webkit-transform: scale(0) rotate(45deg); transform: scale(0) rotate(45deg); opacity: 0.5; }
+  81% { -webkit-transform: scale(4) rotate(45deg); transform: scale(4) rotate(45deg); opacity: 1; }
+  100% { -webkit-transform: scale(50) rotate(45deg); transform: scale(50) rotate(45deg); opacity: 0; }
+}
+@-webkit-keyframes is-reflection2 {
+  0% { -webkit-transform: scale(0) rotate(45deg); opacity: 0; }
+  80% { -webkit-transform: scale(0) rotate(45deg); opacity: 0.5; }
+  81% { -webkit-transform: scale(4) rotate(45deg); opacity: 1; }
+  100% { -webkit-transform: scale(50) rotate(45deg); opacity: 0; }
+}
+ 
+
+/* ボタン矢印揺れ */
+.is-trembling a:before {
+  -webkit-animation-name:is-trembling;
+  -webkit-animation-duration:.8s;
+  -webkit-animation-iteration-count:infinite;
+  -webkit-animation-timing-function:ease;
+  -moz-animation-name:is-trembling;
+  -moz-animation-duration:1s;
+  -moz-animation-iteration-count:infinite;
+  -moz-animation-timing-function:ease;
+}
+@-webkit-keyframes is-trembling {
+  0% {-webkit-transform:translate(-3px, 0);}
+  100% {-webkit-transform:translate(0, 0);}
+}
+ 
+/* ボタンバウンド */
+.is-bounce {
+  animation: bounce 4s infinite;
+  -moz-animation: bounce 4s infinite;
+  -webkit-animation: bounce 4s infinite;
+  -webkit-animation-delay: 4s;
+  animation-delay: 4s;
+}
+@-webkit-keyframes bounce {
+  0%, 4%, 10%, 18%, 100% {-webkit-transform: translateY(0);}
+  5% {-webkit-transform: translateY(-6px);}
+  12% {-webkit-transform: translateY(-4px);}
+}
+@keyframes bounce {
+  20%, 24%, 30%, 34%, 100% {-webkit-transform: translateY(0);transform: translateY(0);}
+  25% {-webkit-transform: translateY(-6px);transform: translateY(-6px);}
+  32% {-webkit-transform: translateY(-4px);transform: translateY(-4px);}
+}
+/* アニメーション遅延 */
+.is-bounce + .is-bounce {
+  -webkit-animation-delay: .5s;
+  animation-delay: .5s;
+}
+ 
+/* ぽよぽよ */
+.is-purun {
+  -webkit-animation: is-purun 5s infinite;
+  -moz-animation: is-purun 5s infinite;
+  animation: is-purun 5s infinite;
+}
+@-webkit-keyframes is-purun {
+   0% { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
+   4% { -webkit-transform: scale(0.9, 0.9) translate(0%, 3%); }
+   8% { -webkit-transform: scale(1.1, 0.8) translate(0%, 7%); }
+  12% { -webkit-transform: scale(0.9, 0.9) translate(0%, -7%); }
+  18% { -webkit-transform: scale(1.1, 0.9) translate(0%, 3%); }
+  25% { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
+}
+@keyframes is-purun {
+   0% { transform: scale(1.0, 1.0) translate(0%, 0%); }
+   4% { transform: scale(0.9, 0.9) translate(0%, 3%); }
+   8% { transform: scale(1.1, 0.8) translate(0%, 7%); }
+  12% { transform: scale(0.9, 0.9) translate(0%, -7%); }
+  18% { transform: scale(1.1, 0.9) translate(0%, 3%); }
+  25% { transform: scale(1.0, 1.0) translate(0%, 0%); }
+}
+/* アニメーション遅延 */
+.is-purun + .is-purun {
+  -webkit-animation-delay: .5s;
+  animation-delay: .5s;
+}
+
+@media only screen and (max-width: 767px) {
+  .btn-yuya a {
+    font-size: 1.3em;
+    margin: 0 auto 1em;
+    width: 94%;
+  }
+}
